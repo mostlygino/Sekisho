@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>Sekisho</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>sekisho</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Sekisho session</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>har</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>HTTP Archive</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>Sekisho</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>dev.mostlygino.sekisho</string>
+	<key>CFBundleName</key>
+	<string>Sekisho</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.2</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.developer-tools</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>26.0</string>
+	<key>NSAccentColorName</key>
+	<string>AccentColor</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>© 2026 Gino de Graaff. Code under AGPL-3.0-or-later; name, icon and artwork reserved.</string>
+	<key>SekishoBuildDate</key>
+	<string></string>
+	<key>SekishoChannel</key>
+	<string>Development</string>
+	<key>SekishoCommit</key>
+	<string>unknown</string>
+</dict>
+</plist>

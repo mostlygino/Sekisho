@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="2">
+    <title>Sekisho</title>
+    <organization>dev.mostlygino</organization>
+    <domains enable_localSystem="true" enable_currentUserHome="false" enable_anywhere="false"/>
+    <options customize="never" require-scripts="false" hostArchitectures="arm64" rootVolumeOnly="true"/>
+    <allowed-os-versions><os-version min="26.0"/></allowed-os-versions>
+    <welcome file="welcome.html" mime-type="text/html"/>
+    <license file="license.html" mime-type="text/html"/>
+    <conclusion file="conclusion.html" mime-type="text/html"/>
+    <background file="installer-light.tiff" mime-type="image/tiff" alignment="bottomleft" scaling="none"/>
+    <background-darkAqua file="installer-dark.tiff" mime-type="image/tiff" alignment="bottomleft" scaling="none"/>
+    <choices-outline>
+        <line choice="app"/>
+    </choices-outline>
+    <choice id="app" title="Sekisho" description="The app, installed in Applications.">
+        <pkg-ref id="dev.mostlygino.sekisho"/>
+    </choice>
+    <pkg-ref id="dev.mostlygino.sekisho" version="__VERSION__" onConclusion="none">Sekisho-app.pkg</pkg-ref>
+</installer-gui-script>

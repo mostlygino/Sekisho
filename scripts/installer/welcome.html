@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+<h1>Sekisho <span class="mark">関所</span></h1>
+<p class="lede">Stop, read and change every request on its way through. A native Mac debugging proxy for HTTP and HTTPS.</p>
+
+<p>This installs Sekisho __VERSION__ in Applications. Sekisho is free software (AGPL-3.0-or-later); its source is at <a href="https://github.com/mostlygino/Sekisho">github.com/mostlygino/Sekisho</a>.</p>
+
+<div class="card">
+<p><strong>Reading HTTPS</strong> needs Sekisho's own certificate authority, made on this Mac at first launch.
+Sekisho asks before it adds it to your login keychain, and macOS asks for your password. The private key never leaves this Mac.</p>
+<p>Sekisho listens on <code>127.0.0.1:9090</code> only, and changes the macOS proxy only when you switch it on. Quitting puts the previous setting back.</p>
+</div>
+
+<h2>Needs</h2>
+<ul>
+<li>macOS 26 or later, Apple silicon</li>
+<li>About __SIZE__ MB of disk space</li>
+</ul>
+</body></html>

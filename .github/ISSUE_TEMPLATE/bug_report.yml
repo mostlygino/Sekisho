@@ -1,0 +1,37 @@
+name: Bug report
+description: Something in Sekisho does not work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please **do not attach real sessions or HAR files**: they hold tokens, cookies and other people's data.
+        A screenshot, the steps, or traffic you made on purpose (for example `curl -x 127.0.0.1:9090 https://example.com`) is enough.
+        Security issues go through **Security > Report a vulnerability**, not here.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Enable SSL Proxying for …
+        2. Open …
+        3. …
+  - type: input
+    id: about
+    attributes:
+      label: Version details
+      description: Sekisho > About Sekisho, then the copy button by the build line (it puts the Sekisho and macOS versions on the clipboard).
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [HTTPS / certificate, macOS proxy, Request list, Inspector, Breakpoints, Map Local / Map Remote, Scripting, Other tools, Compose / Repeat / Compare, Sessions / HAR, Devices on the network, Command palette, Install, Other]

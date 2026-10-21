@@ -1,0 +1,13 @@
+:root { color-scheme: light dark; --ink: #1B1917; --soft: #5A534B; --brass: #7A5A1E; --rule: #E4E0D8; --card: #F6F4F0; }
+@media (prefers-color-scheme: dark) { :root { --ink: #EEEAE4; --soft: #A8A097; --brass: #D9AE5C; --rule: #36322E; --card: #221F1D; } }
+body { font: 13px/1.5 -apple-system, "SF Pro Text", sans-serif; color: var(--ink); margin: 0; padding: 4px 6px; }
+h1 { font: 600 20px/1.25 -apple-system, "SF Pro Display", sans-serif; margin: 0 0 4px; letter-spacing: 0.1px; }
+.lede { color: var(--soft); margin: 0 0 16px; }
+h2 { font-size: 13px; font-weight: 600; margin: 18px 0 6px; }
+p, li { margin: 0 0 6px; }
+ul { padding-left: 18px; margin: 0; }
+code { font: 12px "SF Mono", ui-monospace, monospace; background: var(--card); border: 1px solid var(--rule); border-radius: 5px; padding: 1px 5px; }
+.card { background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--brass); border-radius: 8px; padding: 10px 12px; margin: 12px 0; }
+.mark { color: var(--brass); font-weight: 600; }
+a { color: var(--brass); text-decoration: none; }
+.kbd { font: 600 11.5px -apple-system, sans-serif; border: 1px solid var(--rule); border-bottom-width: 2px; border-radius: 5px; padding: 0 5px; }

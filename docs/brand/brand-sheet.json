@@ -1,0 +1,30 @@
+{
+ "name": "Sekisho",
+ "icon": "sekisho-icon.png",
+ "accent": "#1F8A5B",
+ "line": [
+  "通票",
+  "Tsūhyō",
+  "関所"
+ ],
+ "sheet": "On a single line only one train may enter a section, and the driver proves it by holding the tablet handed over at the signal box: a brass disc whose cut-out differs per section. The railway's own checkpoint pass. A triangle tablet on its oxblood leather pouch, saddle-stitched.",
+ "swatches": [
+  [
+   "brass",
+   "#C29B58"
+  ],
+  [
+   "leather",
+   "#49181C"
+  ],
+  [
+   "thread",
+   "#FAECC6"
+  ],
+  [
+   "patina",
+   "#2A1C0E"
+  ]
+ ],
+ "sheet_out": "sekisho-sheet-tsuhyo.png"
+}

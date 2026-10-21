@@ -1,0 +1,17 @@
+{
+  "name": "Sekisho",
+  "eyebrow": "A checkpoint for HTTP",
+  "tagline": "Stop, read and change every request on its way through.",
+  "footer": "TURNED BRASS · OXBLOOD LEATHER · SADDLE STITCH",
+  "features": [
+    ["See every request", "Which app sent it, headers, body and timing."],
+    ["Open HTTPS", "Its own CA, decrypting only the hosts you list."],
+    ["Change it in flight", "Breakpoints, Map Local and Remote, scripts."]
+  ],
+  "material": {
+    "kind": "cloth",
+    "light": ["#f4eee3", "#fbf8f1", "#2a1c0e", "#6b5a45", "#e0d5c3", "#8a6420"],
+    "dark": ["#17110c", "#1f1711", "#f4eee3", "#c4b49c", "#3a2c20", "#d9ae5c"]
+  },
+  "icon": "readme-icon.png"
+}

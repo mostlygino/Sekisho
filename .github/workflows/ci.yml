@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Build and test
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Toolchain
+        run: |
+          sudo xcode-select -s /Applications/Xcode_26.0.app 2>/dev/null || sudo xcode-select -s /Applications/Xcode.app
+          xcodebuild -version
+          swift --version
+
+      - name: Build
+        run: swift build --build-tests
+
+      - name: Tests
+        # The engine through a live proxy on 127.0.0.1, against local fixture servers.
+        run: swift test --skip-build
+
+      - name: App bundle
+        run: DEVELOPER_DIR=$(xcode-select -p) ./make-app.sh
+
+  secrets:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

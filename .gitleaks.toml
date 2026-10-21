@@ -1,0 +1,20 @@
+# Gitleaks: the default rules, minus what is synthetic or public on purpose.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Synthetic demo and test data, and the public release key fingerprint"
+regexTarget = "match"
+paths = [
+  '''^docs/demo/.*\.sekisho$''',
+]
+regexes = [
+  # The release key's fingerprint (public; also in SECURITY.md and Resources/release-key.asc).
+  '''KEY=4C49B6E8DC9F50C80A1A20B805BE68B6158B9E08''',
+  # The demo session's JWT: its signature is the word "signature", base64url.
+  '''eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\.[A-Za-z0-9_-]+\.c2lnbmF0dXJl''',
+  # Test credentials in curl import tests.
+  '''-u gino:secret''',
+  # A Swift property declaration, not a key.
+  '''rootKey: P256\.Signing\.PrivateKey''',
+]
