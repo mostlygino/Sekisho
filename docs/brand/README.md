@@ -18,7 +18,14 @@ disappears below 128 px by design (`Detail` in the renderer: `.glyph` up to 64 p
 
 ## Provenance and export
 
-**Since 2026-10-21 the app icon is a generated image**, not this renderer's output: the Tsūhyō tablet from [PROMPT.md](PROMPT.md), rendered with an image generator to the standard of Onmitsu and Kuro. `sekisho-icon-master.png` is the original, `sekisho-icon.png` the same object fitted to an 860 px body on a 1024 canvas, which feeds `Resources/AppIcon.icns`. The renderer below still makes the option sheets; the brand sheet comes from `brand_sheet.py` (text and colours in `brand-sheet.json`, laid out like the renderer's sheet, drawn by headless Chromium).
+**Since 2026-10-21 the app icon is a generated image**, not this renderer's output: the Tsūhyō tablet from [PROMPT.md](PROMPT.md), rendered with an image generator to the standard of Onmitsu and Kuro. `sekisho-icon-master.png` is the original, `sekisho-icon.png` the object cut out on a 1024 canvas. `scripts/fit-icon.swift` fits that onto the macOS icon grid (an 824 px squircle 100 px in, with the system shadow) for `Resources/AppIcon.icns`. Fitted to 860 px, as it was until 2026-10-22, macOS 26 shrank the icon onto a grey plate.
+
+```sh
+swiftc -O scripts/fit-icon.swift -o /tmp/fit-icon
+/tmp/fit-icon docs/brand/sekisho-icon.png /tmp/Sekisho.iconset
+iconutil -c icns /tmp/Sekisho.iconset -o Resources/AppIcon.icns
+```
+ The renderer below still makes the option sheets; the brand sheet comes from `brand_sheet.py` (text and colours in `brand-sheet.json`, laid out like the renderer's sheet, drawn by headless Chromium).
 
 Procedural, no generated imagery: `scripts/make-icon.swift`, whose core (tokens through `softShadow`) is Kekkai's
 renderer unchanged; one window high left, height fields, marched shadows, analytic room reflections.
